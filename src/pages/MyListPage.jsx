@@ -3,11 +3,13 @@ import UseAuth from "../Hooks/useAuth";
 import { FaPencil } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyListPage = () => {
   const { user } = UseAuth() || {};
 
   const [item, setItem] = useState([]);
+  const [control, setControl] = useState([false]);
 
   useEffect(() => {
     fetch(`http://localhost:4000/mySpot/${user.email}`)
@@ -15,11 +17,27 @@ const MyListPage = () => {
       .then((data) => {
         setItem(data);
       });
-  }, [user]);
+  }, [user, control]);
 
 
-  const handleDelete = _id => {
-    console.log(_id);
+  const handleDelete = (id) => {
+    fetch(`http://localhost:4000/delet/${id}`, {
+      method: "DELETE",
+    })
+    .then((res) => res.json())
+    .then((data) => {
+
+      if(data.deletedCount > 0){
+        setControl(!control)
+        Swal.fire({
+          title: "success!",
+          text: "Delete Successfully",
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
+      } 
+
+    });
 
   }
 
@@ -57,16 +75,12 @@ const MyListPage = () => {
                   <div className="flex gap-2 justify-center items-center">
 
 
-                    {/* <Link to={`/update/${item._id}}`>   */}
-
                         <Link to={`/update/${i._id}`}>
                             <button className="btn btn-ghost btn-xs border-2 border-black"> <FaPencil /></button>                         
                         </Link>                   
 
 
-
-                    <button onClick={() => handleDelete()} 
-                    
+                    <button onClick={() => handleDelete(i._id)}                     
                     className="btn btn-ghost btn-xs border-2 border-black">
                       <MdDelete />
                     </button>

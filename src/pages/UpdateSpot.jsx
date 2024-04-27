@@ -1,22 +1,17 @@
 
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import UseAuth from "../Hooks/useAuth";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 
 const UpdateSpot = () => {
-
     
-    const { id } = useParams();
-    const [spot, SetSpot] = useState(null); 
-  
+    const { id } = useParams();  
 
     useEffect(() => {
         fetch(`http://localhost:4000/singleSpot/${id}`)
           .then((res) => res.json())
           .then((data) => {
-            SetSpot(data);
             console.log(data);
           });
       }, [id]);
@@ -63,10 +58,10 @@ const UpdateSpot = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
-      if(data.insertedId){
+      if(data.modifiedCount > 0){
         Swal.fire({
           title: "success!",
-          text: "Added Tourists Spot Successfully",
+          text: "Update Successfully",
           icon: "success",
           confirmButtonText: "Ok",
         });
