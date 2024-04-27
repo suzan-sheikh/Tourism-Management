@@ -1,24 +1,19 @@
-import { IoLocationSharp } from "react-icons/io5";
+import { FcOvertime } from "react-icons/fc";
 import { NavLink } from "react-router-dom";
 import { FaChildren } from "react-icons/fa6";
-import { MdAccessTime } from "react-icons/md";
+import PropTypes from 'prop-types'; 
 
 const PlaceCard = ({spot}) => {
   console.log(spot);
 
   const {
+    _id,
     name,
-    country,
-    location,
-    description,
     cost,
     seasonality,
     time,
     totalVisitor,
-    email,
-    userName,
     imgURL,
-    userEmail
   } = spot;
 
   return (
@@ -35,22 +30,15 @@ const PlaceCard = ({spot}) => {
         </div>
 
         <div className="space-y-2 p-3">
-          <h1 className="line-clamp-1 font-bold text-xl">{name}</h1>
-          <div className="flex items-center gap-2 opacity-70">
-            <IoLocationSharp />
-            <span>{location}</span>
-          </div>
-          <p className="line-clamp-2">{description}</p>
-
-          <div className="flex items-center justify-between border-t-2 py-3 !mt-3">
-            <div className="opacity-70 flex gap-1 items-center justify-center">
-              <FaChildren /> 
-              <p>{totalVisitor}</p>
+          <h1 className="line-clamp-1 text-center font-bold text-xl">{name}</h1>
+          <div className="flex gap-4 justify-around items-center">
+            <div className="flex items-center gap-2 opacity-70">
+            <FaChildren className="text-2xl" /> 
+              <span className="text-2xl">{totalVisitor}</span>
             </div>
-
-            <div className="flex gap-1 items-center justify-center">
-              <MdAccessTime /> 
-              <p>  {time}</p>
+            <div className="flex items-center justify-start gap-1">
+            <FcOvertime className="text-2xl" />
+            <p className="line-clamp-2 text-2xl">{time}</p>          
             </div>
           </div>
 
@@ -65,7 +53,7 @@ const PlaceCard = ({spot}) => {
 
           <div>
           <NavLink
-            to='/'
+            to={`/spot/${_id}`}
             className="btn btn-sm btn-neutral px-8 w-full hover:bg-[#33908a] border-none"
           >
             View Property
@@ -77,4 +65,7 @@ const PlaceCard = ({spot}) => {
   );
 };
 
+PlaceCard.propTypes = {
+  spot: PropTypes.object.isRequired
+}
 export default PlaceCard;

@@ -1,11 +1,25 @@
+
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import UseAuth from "../../Hooks/useAuth";
+import UseAuth from "../Hooks/useAuth";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-const AddTourists = () => {
+const UpdateSpot = () => {
 
-  const {user} = UseAuth() || {};
-  const userEmail = user.email;
+    
+    const { id } = useParams();
+    const [spot, SetSpot] = useState(null); 
+  
+
+    useEffect(() => {
+        fetch(`http://localhost:4000/singleSpot/${id}`)
+          .then((res) => res.json())
+          .then((data) => {
+            SetSpot(data);
+            console.log(data);
+          });
+      }, [id]);
 
   const {
     register,
@@ -23,36 +37,28 @@ const AddTourists = () => {
       seasonality,
       time,
       totalVisitor,
-      email,
-      userName,
       imgURL,
     } = data;
 
-    const newSpot = {
-      name,
-      country,
-      location,
-      description,
-      cost,
-      seasonality,
-      time,
-      totalVisitor,
-      email,
-      userName,
-      imgURL,
-      userEmail
+    const updateData = {
+        name,
+        country,
+        location,
+        description,
+        cost,
+        seasonality,
+        time,
+        totalVisitor,
+        imgURL,
     };
 
-    console.log(newSpot);
-
-
     // send data to server
-    fetch('http://localhost:4000/spot', {
-      method: 'POST',
+    fetch(`http://localhost:4000/updateSpot/${id}`, {
+      method: 'PUT',
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify(newSpot)
+      body: JSON.stringify(updateData)
     })
     .then(res => res.json())
     .then(data => {
@@ -71,8 +77,8 @@ const AddTourists = () => {
 
   return (
     <div>
-      <section className="p-6 mt-20 container">
-        <h2 className="text-center text-2xl font-bold">Add Tourists Spot : </h2>
+      <section className="p-6 mt-20 container w-2/3">
+        <h2 className="text-center text-2xl font-bold">Update Your Added Spot : </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
           noValidate=""
@@ -178,29 +184,6 @@ const AddTourists = () => {
               {errors.totalVisitor && <span>This field is required</span>}
             </div>
 
-            <div className="col-span-full sm:col-span-3 text-left">
-              <label className="text-sm text-left mb-2">User Email :</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Yourmail@abc.com"
-                className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
-                {...register("email", { required: true })}
-              />
-              {errors.email && <span>This field is required</span>}
-            </div>
-            <div className="col-span-full sm:col-span-3 text-left">
-              <label className="text-sm text-left mb-2">User Name :</label>
-              <input
-                type="text"
-                name="userName"
-                placeholder="User Name"
-                className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
-                {...register("userName", { required: true })}
-              />
-              {errors.userName && <span>This field is required</span>}
-            </div>
-
             <div className="col-span-full text-left">
               <label className="text-sm text-left mb-2">Image URL :</label>
               <input
@@ -215,8 +198,8 @@ const AddTourists = () => {
           </div>
           <input
             type="submit"
-            value="Add"
-            className="btn btn-sm btn-neutral m-0"
+            value="Update"
+            className="btn btn-sm btn-neutral bg-primary m-0"
           />
         </form>
       </section>
@@ -224,4 +207,4 @@ const AddTourists = () => {
   );
 };
 
-export default AddTourists;
+export default UpdateSpot;
