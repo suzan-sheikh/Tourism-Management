@@ -5,13 +5,14 @@ import About from "../pages/About";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AddTourists from "../components/AddTouristsSpotPage/AddTourists";
-import Error from "../pages/Error";
+import PrivateRoute from "../pages/PrivateRoute";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
-    ErrorPage: <Error/>,
+    errorElement: <ErrorPage/>,    
     children: [
       {
         path: "/",
@@ -19,7 +20,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/addTourist",
-        element: <AddTourists/>
+        element: <PrivateRoute><AddTourists/></PrivateRoute>
       },
       {
         path: "/myList",
