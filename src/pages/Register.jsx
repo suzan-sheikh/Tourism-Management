@@ -6,11 +6,11 @@ import toast from "react-hot-toast";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import useAuth from "../Hooks/useAuth";
+import UseAuth from "../Hooks/useAuth";
 
 const Register = () => {
   
-  const {createUser, updateUserProfile, setLoading} = useAuth();
+  const {createUser, updateUserProfile, setLoading} = UseAuth();
   const [showPassword, setShowPassword] = useState(true);
 
   useEffect(() => {

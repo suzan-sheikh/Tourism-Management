@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import useAuth from "../Hooks/useAuth";
+import UseAuth from "../Hooks/useAuth";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
@@ -16,7 +16,7 @@ const Login = () => {
     setLoading,
     githubSignIn,
     loginUser
-  } = useAuth();
+  } = UseAuth();
 
 
 

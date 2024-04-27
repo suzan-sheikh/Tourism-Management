@@ -2,11 +2,11 @@ import { NavLink, Link } from "react-router-dom";
 import ResponsiveMenu from "./ResponsiveMenu";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import { useEffect, useState } from "react";
-import useAuth from "../../Hooks/useAuth";
+import UseAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const { user, logout } = useAuth();
+  const {user, logout} = UseAuth();
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };

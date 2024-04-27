@@ -1,7 +1,12 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import UseAuth from "../../Hooks/useAuth";
 
 const AddTourists = () => {
+
+  const {user} = UseAuth();
+  const userEmail = user.email;
+
   const {
     register,
     handleSubmit,
@@ -22,6 +27,7 @@ const AddTourists = () => {
       userName,
       imgURL,
     } = data;
+
     const newSpot = {
       name,
       country,
@@ -34,6 +40,7 @@ const AddTourists = () => {
       email,
       userName,
       imgURL,
+      userEmail
     };
 
     console.log(newSpot);
