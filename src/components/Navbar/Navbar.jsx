@@ -85,20 +85,6 @@ const Navbar = () => {
     </>
   );
 
-
-  const [showLogout, setShowLogout] = useState(false);
-
-  const handleMouseEnter = () => {
-    setShowLogout(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowLogout(false);
-  };
-
-
-
-
   return (
     <>
       <nav className="fixed top-0 right-0 w-full z-50 bg-[#ffffff] backdrop-blur-sm text-black shadow-md">
@@ -123,10 +109,11 @@ const Navbar = () => {
               <ul className="flex items-center gap-6 ">{navLink}</ul>
             </div>
             <div className="flex items-center gap-4 justify-center">
-              {user ? (
 
-                <div className="flex items-center gap-2" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                <div className="rounded-full cursor-pointer" onMouseEnter={handleMouseEnter}>
+
+              {user ? (
+              <div className="flex items-center gap-2">
+                <div className="rounded-full cursor-pointer">
                   <img
                     className="w-10 h-10 rounded-full"
                     src={user.photoURL}
@@ -134,32 +121,28 @@ const Navbar = () => {
                     title={user.displayName}
                   />
                 </div>
-                
-                {showLogout && (
-                  <button
-                    className="btn btn-sm btn-neutral text-white"
-                    onClick={logout}
-                  >
-                    Logout
-                  </button>
-                )}
-                </div>
-    
-              ) : (
-                <div className="flex items-center gap-2">
-                  <Link to="/login">
-                    <button className="btn btn-sm btn-neutral text-white">
-                      Login
-                    </button>
-                  </Link>
-                  <Link to="/register">
-                    <button className="btn btn-sm btn-neutral text-white">
-                    Register
-                    </button>
-                  </Link>
-                </div>
-              )}
-
+                <button
+                  className="btn btn-sm btn-neutral text-white"
+                  onClick={logout}
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2">
+              <Link to="/login">
+                <button className="btn btn-sm btn-neutral text-white">
+                  Login
+                </button>
+              </Link>
+              <Link to="/register">
+                <button className="btn btn-sm btn-neutral text-white">
+                Register
+                </button>
+              </Link>
+            </div>
+              
+            )}
               <div>
                 <label className="swap swap-rotate">
                   {/* this hidden checkbox controls the state */}
