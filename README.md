@@ -1,5 +1,10 @@
 <h1 align="center">ARMY WELFARE TRUST TOURISM (AWT)</h1>
 
+<p align="justify">
+    Southeast Asia
+</p>
+
+
 # Description
 <p align="justify">
     Bangladesh Army Welfare Trust is a trust owned and operated by the Bangladesh Army. It owns a number of businesses including hotels, gas stations, and golf clubs. In 2021, The Economist placed the value of the trust holdings at US$700 million.
