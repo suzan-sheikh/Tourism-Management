@@ -28,7 +28,7 @@ const Details = () => {
                         {/* Style will be inherited from the parent element */}
                         <Typewriter
                             words={['Bangladesh', 'Thailand', 'Indonesia', 'Vietnam', 'Malaysia!']}
-                            loop={5}
+                            loop={10}
                             cursor
                             cursorStyle="_"
                             typeSpeed={70}

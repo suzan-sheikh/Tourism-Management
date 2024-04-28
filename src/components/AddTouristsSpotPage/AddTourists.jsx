@@ -7,6 +7,8 @@ const AddTourists = () => {
   const {user} = UseAuth() || {};
   const userEmail = user.email;
 
+  console.log(user);
+
   const {
     register,
     handleSubmit,
