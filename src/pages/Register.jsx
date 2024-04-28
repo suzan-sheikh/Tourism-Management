@@ -41,8 +41,9 @@ const Register = () => {
     createUser(email, password)
       .then(() => {
         updateUserProfile(name, imgUrl)
-        .then(() => {
+        .then((result) => {
           setLoading(false);
+          console.log(result);
           navigate(form);
           toast.success("Register Successfully");
         });

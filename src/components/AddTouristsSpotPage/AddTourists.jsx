@@ -7,7 +7,7 @@ const AddTourists = () => {
   const {user} = UseAuth() || {};
   const userEmail = user.email;
 
-  console.log(user);
+  console.log(userEmail);
 
   const {
     register,
@@ -66,7 +66,7 @@ const AddTourists = () => {
           icon: "success",
           confirmButtonText: "Ok",
         });
-        reset();
+        // reset();
       }      
     })
   };
