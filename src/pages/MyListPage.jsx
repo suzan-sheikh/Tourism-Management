@@ -56,33 +56,6 @@ const MyListPage = () => {
 
 
 
-
-
-    // fetch(`http://localhost:4000/delet/${id}`, {
-    //   method: "DELETE",
-    // })
-    // .then((res) => res.json())
-    // .then((data) => {
-
-    //   if(data.deletedCount > 0){
-    //     setControl(!control)
-
-
-
-
-
-
-
-    //     Swal.fire({
-    //       title: "success!",
-    //       text: "Delete Successfully",
-    //       icon: "success",
-    //       confirmButtonText: "Ok",
-    //     });
-    //   } 
-
-    // });
-
   }
 
 

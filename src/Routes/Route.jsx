@@ -6,11 +6,10 @@ import Register from "../pages/Register";
 import AddTourists from "../components/AddTouristsSpotPage/AddTourists";
 import PrivateRoute from "../pages/PrivateRoute";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
-import PropertyDetails from "../pages/PropertyDetails";
 import UpdateSpot from "../pages/UpdateSpot";
 import MyListPage from "../pages/MylistPage";
-import About from "../pages/About";
 import Details from "../pages/Details";
+import Places from "../components/Places/Places";
 
 export const router = createBrowserRouter([
   {
@@ -43,8 +42,12 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><UpdateSpot/></PrivateRoute>  
       },
       {
-        path: '/about',
-        element: <Details/>  
+        path: '/spot/:id',
+        element: <PrivateRoute><Details/></PrivateRoute>   
+      },
+      {
+        path: '/allPlace',
+        element: <Places/>  
       },
 
       // {

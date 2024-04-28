@@ -1,10 +1,27 @@
-import PlaceCard from './PlaceCard';
+import PlaceCard from './MyPlaceCard';
 import FetchData from '../../Hooks/FetchData';
 import Loader from '../../pages/Loader';
 import { Typewriter } from 'react-simple-typewriter';
+import UseAuth from '../../Hooks/useAuth';
+import { useEffect, useState } from 'react';
 
-const Places = () => {
+const MyPlace = () => {
   
+  const { user } = UseAuth() || {};
+  const [item, setItem] = useState([]);
+
+
+  useEffect(() => {
+    fetch(`http://localhost:4000/mySpot/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setItem(data);
+      });
+  }, [user]);
+
+
+
+
   const handleType = (count) => {
     // access word count number
     console.log(count);
@@ -44,7 +61,7 @@ const Places = () => {
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {data.map((spot) => (
+            {item.map((spot) => (
               <PlaceCard key={spot._id} spot={spot} />
             ))}
           </div>
@@ -54,4 +71,4 @@ const Places = () => {
   );
 };
 
-export default Places;
+export default MyPlace;

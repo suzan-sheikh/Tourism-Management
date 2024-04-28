@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FaChildren } from "react-icons/fa6";
 import PropTypes from 'prop-types'; 
 
-const PlaceCard = ({spot}) => {
+const MyPlaceCard = ({spot}) => {
   console.log(spot);
 
   const {
@@ -67,7 +67,7 @@ const PlaceCard = ({spot}) => {
   );
 };
 
-PlaceCard.propTypes = {
+MyPlaceCard.propTypes = {
   spot: PropTypes.object.isRequired
 }
-export default PlaceCard;
+export default MyPlaceCard;
