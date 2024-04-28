@@ -1,10 +1,10 @@
 import Hero from "../components/Hero/Hero";
 import NatureVid from "../assets/video/main.mp4";
-import Places from "../components/Places/Places";
 import Testimonial from "../components/Testimonial/Testimonial";
 import Banner from "../components/Banner/Banner";
 import BannerPic from "../components/BannerPic/BannerPic";
 import Slider from "../components/Slider/Slider";
+import MyPlace from "../components/MyAddPlace/MyPlace";
 
 const Home = () => {
 
@@ -25,8 +25,8 @@ const Home = () => {
         <div>
           <Slider/>
         </div>
-
-        <Places/>
+        <MyPlace/>
+        {/* <Places/> */}
         <BannerPic/>        
         <Banner />
         <Testimonial />
