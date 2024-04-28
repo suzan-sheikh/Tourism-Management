@@ -34,11 +34,11 @@ const PlaceCard = ({spot}) => {
           <div className="flex gap-4 justify-around items-center">
             <div className="flex items-center gap-2 opacity-70">
             <FaChildren className="text-2xl" /> 
-              <span className="text-2xl">{totalVisitor}</span>
+              <span className="text-lg">{totalVisitor}</span>
             </div>
             <div className="flex items-center justify-start gap-1">
             <FcOvertime className="text-2xl" />
-            <p className="line-clamp-2 text-2xl">{time}</p>          
+            <p className="line-clamp-2 text-lg">{time}</p>          
             </div>
           </div>
 
@@ -53,7 +53,8 @@ const PlaceCard = ({spot}) => {
 
           <div>
           <NavLink
-            to={`/spot/${_id}`}
+            to='/about'
+            // to={`/spot/${_id}`}
             className="btn btn-sm btn-neutral px-8 w-full hover:bg-[#33908a] border-none"
           >
             View Property

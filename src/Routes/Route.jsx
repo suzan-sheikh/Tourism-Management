@@ -9,6 +9,8 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import PropertyDetails from "../pages/PropertyDetails";
 import UpdateSpot from "../pages/UpdateSpot";
 import MyListPage from "../pages/MylistPage";
+import About from "../pages/About";
+import Details from "../pages/Details";
 
 export const router = createBrowserRouter([
   {
@@ -40,16 +42,20 @@ export const router = createBrowserRouter([
         path: '/update/:id',
         element: <PrivateRoute><UpdateSpot/></PrivateRoute>  
       },
-
       {
-        path: "/book/:id",
-        element: <PrivateRoute>
-          <PropertyDetails />,
-        </PrivateRoute>,   
-        loader: () =>
-          // fetch("property.json"),
-          fetch("http://localhost:4000/spot"),
+        path: '/about',
+        element: <Details/>  
       },
+
+      // {
+      //   path: "/book/:id",
+      //   element: <PrivateRoute>
+      //     <PropertyDetails />,
+      //   </PrivateRoute>,   
+      //   loader: () =>
+      //     // fetch("property.json"),
+      //     fetch("http://localhost:4000/spot"),
+      // },
     ],
   },
 ]);

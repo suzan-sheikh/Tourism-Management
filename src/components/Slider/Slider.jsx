@@ -32,38 +32,42 @@ const Slider = () => {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
+
           <SwiperSlide>
             <div>
-              <div className="h-72 md:h-[450px] w-full rounded-xl bg-[url('https://imgs.search.brave.com/qEBl336pc98PW3OISCS6gJGBp4z7Vg0AFqVSxVLxfJk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMTg5/OTM4OC5qcGc')] bg-cover flex items-center justify-center">
+              <div className="h-72 md:h-[450px] w-full rounded-xl bg-[url('https://images.unsplash.com/photo-1602528495711-f52bf3988a00?q=80&w=1806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover flex items-center justify-center">
                 <div className="text-center p-5">
-                  <h3 className="animate__animated animate__flash text-2xl font-semibold sm:text-4xl mb-4 text-center">
-                    Army Welfare{" "}
-                    <span className="text-[#33908a]">Trust-Tourism</span>
+                  <h3 className="animate__animated animate__flash text-2xl font-semibold sm:text-4xl mb-4 text-center text-white">
+                  Sajek {" "}
+                    <span className="text-[#33908a]">Valley</span>
                   </h3>
+                  <p className="text-white">The designation of Sajek Valley is derived from the Sajek River, which originates from the Karnaphuli river.</p>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div>
-              <div className="h-72 md:h-[450px] w-full rounded-xl bg-[url('https://imgs.search.brave.com/qEBl336pc98PW3OISCS6gJGBp4z7Vg0AFqVSxVLxfJk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMTg5/OTM4OC5qcGc')] bg-cover flex items-center justify-center">
+              <div className="h-72 md:h-[450px] w-full rounded-xl bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover flex items-center justify-center">
                 <div className="text-center p-5">
                   <h3 className="animate__animated animate__flash text-2xl font-semibold sm:text-4xl mb-4 text-center">
-                    Army Welfare{" "}
-                    <span className="text-[#33908a]">Trust-Tourism</span>
+                  Cox's{" "}
+                    <span className="text-[#33908a]">Bazar</span>
                   </h3>
+                  <p>Cox's Bazar, Bangladesh, is the longest natural sea beach in the world running 120 kilometres</p>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div>
-              <div className="h-72 md:h-[450px] w-full rounded-xl bg-[url('https://imgs.search.brave.com/qEBl336pc98PW3OISCS6gJGBp4z7Vg0AFqVSxVLxfJk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMTg5/OTM4OC5qcGc')] bg-cover flex items-center justify-center">
+              <div className="h-72 md:h-[450px] w-full rounded-xl bg-[url('https://images.unsplash.com/photo-1608958435020-e8a7109ba809?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover flex items-center justify-center">
                 <div className="text-center p-5">
                   <h3 className="animate__animated animate__flash text-2xl font-semibold sm:text-4xl mb-4 text-center">
-                    Army Welfare{" "}
-                    <span className="text-[#33908a]">Trust-Tourism</span>
+                  Saint Martin{" "}
+                    <span className="text-[#33908a]">Island</span>
                   </h3>
+                  <p>Millennia ago, the island used to be an extension of the Teknaf peninsula</p>
                 </div>
               </div>
             </div>
