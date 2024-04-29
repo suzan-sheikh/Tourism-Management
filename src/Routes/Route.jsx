@@ -10,6 +10,10 @@ import UpdateSpot from "../pages/UpdateSpot";
 import MyListPage from "../pages/MylistPage";
 import Details from "../pages/Details";
 import Places from "../components/Places/Places";
+import AddCountry from "../components/AddCountry/AddCountry";
+import All from "../components/AddCountry/All";
+import Selected from "../components/AllCountry/Selected";
+import CountryDetails from "../pages/CountryDetails";
 
 export const router = createBrowserRouter([
   {
@@ -49,16 +53,24 @@ export const router = createBrowserRouter([
         path: '/allPlace',
         element: <Places/>  
       },
+      {
+        path: '/country', 
+        element: <AddCountry/>
+      },
+      {
+        path:'/country/:name',
+        element: <Selected/>
+      },
 
-      // {
-      //   path: "/book/:id",
-      //   element: <PrivateRoute>
-      //     <PropertyDetails />,
-      //   </PrivateRoute>,   
-      //   loader: () =>
-      //     // fetch("property.json"),
-      //     fetch("http://localhost:4000/spot"),
-      // },
+      {
+        path: '/countryName/:id',
+        element: <CountryDetails/>   
+      },
+
+      {
+        path:'/all',
+        element: <All/>
+      }
     ],
   },
 ]);

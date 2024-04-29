@@ -28,7 +28,7 @@ const Places = () => {
         <section data-aos="fade-up" className="container mt-24 ">
           
           <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-3xl font-bold">
-            You Add Tourist Spots{' '}
+            You Add Tourist Spots
             <span style={{ color: 'red', fontWeight: 'bold' }}>
               {/* Style will be inherited from the parent element */}
               <Typewriter

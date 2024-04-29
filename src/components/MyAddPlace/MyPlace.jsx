@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+
 import PlaceCard from './MyPlaceCard';
 import { Typewriter } from 'react-simple-typewriter';
 import useAuth from '../../Hooks/useAuth';
+import { useEffect, useState } from 'react';
 
 const MyPlace = () => {
   const { user } = useAuth() || {};
@@ -40,8 +41,8 @@ const MyPlace = () => {
     <div className="py-10">
       <section data-aos="fade-up" className="container mt-24">
         <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-3xl font-bold">
-          Life is simple{' '}
-          <span style={{ color: 'red', fontWeight: 'bold' }}>
+          You Added on 
+          <span className='ml-2' style={{ color: 'red', fontWeight: 'bold' }}> 
             <Typewriter
               words={['Bangladesh', 'Thailand', 'Indonesia', 'Vietnam', 'Malaysia!']}
               loop={10}

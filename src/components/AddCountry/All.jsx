@@ -1,13 +1,13 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import UseAuth from "../../Hooks/useAuth";
+// import UseAuth from "../../Hooks/useAuth";
 
-const AddTourists = () => {
+const AddCountry = () => {
 
-  const {user} = UseAuth() || {};
-  const userEmail = user.email;
+  // const {user} = UseAuth() || {};
+  // const userEmail = user.email;
 
-  console.log(userEmail);
+  // console.log(userEmail);
 
   const {
     register,
@@ -22,12 +22,7 @@ const AddTourists = () => {
       location,
       description,
       cost,
-      seasonality,
-      time,
-      totalVisitor,
-      email,
-      userName,
-      imgURL,
+      seasonality    
     } = data;
 
     const newSpot = {
@@ -36,20 +31,14 @@ const AddTourists = () => {
       location,
       description,
       cost,
-      seasonality,
-      time,
-      totalVisitor,
-      email,
-      userName,
-      imgURL,
-      userEmail
+      seasonality
     };
 
     console.log(newSpot);
 
 
     // send data to server
-    fetch('http://localhost:4000/spot', {
+    fetch('http://localhost:4000/allCountry', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -84,7 +73,7 @@ const AddTourists = () => {
           <div className="grid grid-cols-6 gap-2 col-span-full lg:col-span-3">
             <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">
-                Tourists Sport Name : 
+                Tourists Sport Name : :
               </label>
               <input
                 type="text"
@@ -135,7 +124,7 @@ const AddTourists = () => {
             <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">Average Cost :</label>
               <input
-                type="number"
+                type="text"
                 name="cost"
                 placeholder="Average Cost"
                 className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
@@ -153,67 +142,7 @@ const AddTourists = () => {
                 {...register("seasonality", { required: true })}
               />
               {errors.seasonality && <span>This field is required</span>}
-            </div>
-
-            <div className="col-span-full sm:col-span-3 text-left">
-              <label className="text-sm text-left mb-2">Travel Time :</label>
-              <input
-                type="number"
-                name="time"
-                placeholder="7 Days"
-                className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
-                {...register("time", { required: true })}
-              />
-              {errors.time && <span>This field is required</span>}
-            </div>
-            <div className="col-span-full sm:col-span-3 text-left">
-              <label className="text-sm text-left mb-2">
-                Total Visitors Per Year :
-              </label>
-              <input
-                type="number"
-                name="totalVisitor"
-                placeholder="10000"
-                className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
-                {...register("totalVisitor", { required: true })}
-              />
-              {errors.totalVisitor && <span>This field is required</span>}
-            </div>
-
-            <div className="col-span-full sm:col-span-3 text-left">
-              <label className="text-sm text-left mb-2">User Email :</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Yourmail@abc.com"
-                className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
-                {...register("email", { required: true })}
-              />
-              {errors.email && <span>This field is required</span>}
-            </div>
-            <div className="col-span-full sm:col-span-3 text-left">
-              <label className="text-sm text-left mb-2">User Name :</label>
-              <input
-                type="text"
-                name="userName"
-                placeholder="User Name"
-                className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
-                {...register("userName", { required: true })}
-              />
-              {errors.userName && <span>This field is required</span>}
-            </div>
-
-            <div className="col-span-full text-left">
-              <label className="text-sm text-left mb-2">Image URL :</label>
-              <input
-                type="text"
-                name="imgURL"
-                placeholder="Image URL"
-                className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
-                {...register("imgURL", { required: true })}
-              />
-              {errors.imgURL && <span>This field is required</span>}
-            </div>
+            </div>          
           </div>
           <input
             type="submit"
@@ -226,4 +155,4 @@ const AddTourists = () => {
   );
 };
 
-export default AddTourists;
+export default AddCountry;
