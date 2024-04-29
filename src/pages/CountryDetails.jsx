@@ -20,7 +20,7 @@ const CountryDetails = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:4000/countryName/${id}`)
+    fetch(`https://server-gold-five.vercel.app/countryName/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -41,6 +41,13 @@ const CountryDetails = () => {
     <div>
       <div className="container mt-28 mx-auto flex items-center justify-center">
         <div className="w-3/4">
+        <div className="overflow-hidden rounded-xl">
+          <img 
+            src="https://www.indoasia-tours.com/wp-content/uploads/2016/06/bangladesh.jpg"
+            alt="No image"
+            className="mx-auto h-[220px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110 rounded-xl"
+          />
+        </div>
 
           <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-3xl font-bold">
             {name}

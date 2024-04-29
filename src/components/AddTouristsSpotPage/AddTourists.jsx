@@ -5,9 +5,9 @@ import UseAuth from "../../Hooks/useAuth";
 const AddTourists = () => {
 
   const {user} = UseAuth() || {};
-  const userEmail = user.email;
+  const email = user.email;
 
-  console.log(userEmail);
+  console.log(email);
 
   const {
     register,
@@ -24,8 +24,8 @@ const AddTourists = () => {
       cost,
       seasonality,
       time,
-      totalVisitor,
       email,
+      totalVisitor,
       userName,
       imgURL,
     } = data;
@@ -42,14 +42,14 @@ const AddTourists = () => {
       email,
       userName,
       imgURL,
-      userEmail
     };
+
 
     console.log(newSpot);
 
 
     // send data to server
-    fetch('http://localhost:4000/spot', {
+    fetch('https://server-gold-five.vercel.app/spot', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -179,8 +179,9 @@ const AddTourists = () => {
               />
               {errors.totalVisitor && <span>This field is required</span>}
             </div>
-
-            <div className="col-span-full sm:col-span-3 text-left">
+            {
+              user.email && 
+              <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">User Email :</label>
               <input
                 type="email"
@@ -188,9 +189,16 @@ const AddTourists = () => {
                 placeholder="Yourmail@abc.com"
                 className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
                 {...register("email", { required: true })}
+                defaultValue={email}
+                readOnly
               />
-              {errors.email && <span>This field is required</span>}
-            </div>
+              {errors.email && <span>This field is required</span>}              
+            </div> 
+            }
+
+
+
+
             <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">User Name :</label>
               <input

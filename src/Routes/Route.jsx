@@ -7,13 +7,13 @@ import AddTourists from "../components/AddTouristsSpotPage/AddTourists";
 import PrivateRoute from "../pages/PrivateRoute";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import UpdateSpot from "../pages/UpdateSpot";
-import MyListPage from "../pages/MylistPage";
 import Details from "../pages/Details";
 import Places from "../components/Places/Places";
 import AddCountry from "../components/AddCountry/AddCountry";
 import All from "../components/AddCountry/All";
 import Selected from "../components/AllCountry/Selected";
 import CountryDetails from "../pages/CountryDetails";
+import MyListPage from "../pages/MyListPage";
 
 export const router = createBrowserRouter([
   {

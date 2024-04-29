@@ -18,7 +18,7 @@ const Selected = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/allCountry/${name}`)
+    fetch(`https://server-gold-five.vercel.app/allCountry/${name}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -59,13 +59,13 @@ const Selected = () => {
             {data.map((item) => (
               <div key={item._id}>
                 <div className="shadow-2xl transition-all duration-500 hover:shadow-xl cursor-pointer rounded-xl border-2">
-                  {/* <div className="overflow-hidden rounded-xl">
-          <img
-            src={imgURL}
-            alt="No image"
-            className="mx-auto h-[220px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110 rounded-xl"
-          />
-        </div> */}
+                  <div className="overflow-hidden rounded-xl">
+                  <img
+                    src="https://www.indoasia-tours.com/wp-content/uploads/2016/06/bangladesh.jpg"
+                    alt="No image"
+                    className="mx-auto h-[220px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110 rounded-xl"
+                  />
+                </div>
 
                   <div className="space-y-2 p-3">
                     <h1 className="line-clamp-1 font-bold text-3xl text-center text-black">

@@ -1,9 +1,10 @@
 import PlaceCard from './PlaceCard';
-import FetchData from '../../Hooks/FetchData';
-import Loader from '../../pages/Loader';
 import { Typewriter } from 'react-simple-typewriter';
+import { useEffect, useState } from 'react';
 
 const Places = () => {
+
+  const [item, setItem] = useState([]);
   
   const handleType = (count) => {
     // access word count number
@@ -14,13 +15,17 @@ const Places = () => {
     console.log(`Done after 5 loops!`);
   };
 
-  const [data, loading] = FetchData();
+  useEffect(() => {
+    fetch(`https://server-gold-five.vercel.app/spot`)
+      .then((res) => res.json())
+      .then((data) => {
+        setItem(data);
+      });
+  }, []);
 
-  console.log(data);
+  console.log(item);
 
-  if (loading) {
-    return <Loader />;
-  }
+
 
   return (
     <>
@@ -46,7 +51,7 @@ const Places = () => {
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {data.map((spot) => (
+            {item.map((spot) => (
               <PlaceCard key={spot._id} spot={spot} />
             ))}
           </div>

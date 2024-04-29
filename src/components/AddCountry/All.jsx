@@ -22,7 +22,8 @@ const AddCountry = () => {
       location,
       description,
       cost,
-      seasonality    
+      seasonality,
+      imgURL,    
     } = data;
 
     const newSpot = {
@@ -31,14 +32,15 @@ const AddCountry = () => {
       location,
       description,
       cost,
-      seasonality
+      seasonality,
+      imgURL
     };
 
     console.log(newSpot);
 
 
     // send data to server
-    fetch('http://localhost:4000/allCountry', {
+    fetch('https://server-gold-five.vercel.app/allCountry', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -142,7 +144,18 @@ const AddCountry = () => {
                 {...register("seasonality", { required: true })}
               />
               {errors.seasonality && <span>This field is required</span>}
-            </div>          
+            </div>   
+            <div className="col-span-full text-left">
+              <label className="text-sm text-left mb-2">Image URL :</label>
+              <input
+                type="text"
+                name="imgURL"
+                placeholder="Image URL"
+                className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
+                {...register("imgURL", { required: true })}
+              />
+              {errors.imgURL && <span>This field is required</span>}
+            </div>       
           </div>
           <input
             type="submit"
