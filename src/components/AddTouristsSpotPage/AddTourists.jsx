@@ -158,7 +158,7 @@ const AddTourists = () => {
             <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">Travel Time :</label>
               <input
-                type="text"
+                type="number"
                 name="time"
                 placeholder="7 Days"
                 className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"
@@ -171,7 +171,7 @@ const AddTourists = () => {
                 Total Visitors Per Year :
               </label>
               <input
-                type="text"
+                type="number"
                 name="totalVisitor"
                 placeholder="10000"
                 className="w-full rounded-md p-1 pl-2 border-2 text-sm text-primary"

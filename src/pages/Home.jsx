@@ -5,7 +5,7 @@ import Banner from "../components/Banner/Banner";
 import BannerPic from "../components/BannerPic/BannerPic";
 import Slider from "../components/Slider/Slider";
 import MyPlace from "../components/MyAddPlace/MyPlace";
-
+import Country from "../components/Country/Country";
 const Home = () => {
 
   return (
@@ -25,11 +25,13 @@ const Home = () => {
         <div>
           <Slider/>
         </div>
+
         <MyPlace/>
-        {/* <Places/> */}
+        <Country/>
         <BannerPic/>        
         <Banner />
         <Testimonial />
+
       </div>
     </>
   );
