@@ -39,10 +39,12 @@ const Register = () => {
 
     createUser(email, password)
       .then((user) => {
-        updateUserProfile(name, imgUrl).then((result) => {
+        updateUserProfile(name, imgUrl).then(() => {
           console.log(user);
-          console.log(result);
           setLoading(false);
+          setUser((prevUser) => { 
+            return {...prevUser, displayName: name, photoURL: imgUrl }
+          });
           // setUser({ ...user, displayName: name, photoURL: imgUrl });
           navigate(form);
           toast.success("Register Successfully");
@@ -117,7 +119,7 @@ const Register = () => {
             </label>
             <input
               type="text"
-              name="photo"
+              name="imgUrl"
               id="photo"
               placeholder="Photo URL"
               className="w-full px-3 py-1 text-sm border rounded-md border-gray-300 bg-gray-50 text-gray-800"
