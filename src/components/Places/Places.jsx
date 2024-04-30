@@ -26,7 +26,7 @@ const Places = () => {
       once: true,
     });
 
-    fetch("http://localhost:4000/spot")
+    fetch("https://server-gold-five.vercel.app/spot")
       .then((res) => {
         return res.json();
       })

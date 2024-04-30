@@ -23,7 +23,7 @@ const Details = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:4000/singleProduct/${id}`)
+    fetch(`https://server-gold-five.vercel.app/singleProduct/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);

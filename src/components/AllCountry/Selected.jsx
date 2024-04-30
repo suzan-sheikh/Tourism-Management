@@ -26,7 +26,7 @@ const Selected = () => {
       once: true
     });
 
-    fetch(`http://localhost:4000/allCountry/${name}`)
+    fetch(`https://server-gold-five.vercel.app/allCountry/${name}`)
     .then((res) => res.json())
     .then((data) => {
       setData(data);

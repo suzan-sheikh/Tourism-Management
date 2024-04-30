@@ -49,7 +49,7 @@ const AddTourists = () => {
 
 
     // send data to server
-    fetch('http://localhost:4000/spot', {
+    fetch('https://server-gold-five.vercel.app/spot', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

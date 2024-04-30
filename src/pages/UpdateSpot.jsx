@@ -9,7 +9,7 @@ const UpdateSpot = () => {
     const { id } = useParams();  
 
     useEffect(() => {
-        fetch(`http://localhost:4000/singleSpot/${id}`)
+        fetch(`https://server-gold-five.vercel.app/singleSpot/${id}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -48,7 +48,7 @@ const UpdateSpot = () => {
     };
 
     // send data to server
-    fetch(`http://localhost:4000/updateSpot/${id}`, {
+    fetch(`https://server-gold-five.vercel.app/updateSpot/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

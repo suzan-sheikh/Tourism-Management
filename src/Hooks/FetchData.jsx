@@ -9,7 +9,7 @@ const FetchData = () => {
         const fetchData = async () => {
             setLoading(true);
             // const res = await fetch('property.json');
-            const res = await fetch('http://localhost:4000/spot');
+            const res = await fetch('https://server-gold-five.vercel.app/spot');
             const data = await res.json();
             setLoading(false);
             setData(data);
