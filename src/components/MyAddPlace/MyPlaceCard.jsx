@@ -2,6 +2,7 @@ import { FcOvertime } from "react-icons/fc";
 import { NavLink } from "react-router-dom";
 import { FaChildren } from "react-icons/fa6";
 import PropTypes from 'prop-types'; 
+import { TiWeatherPartlySunny } from "react-icons/ti";
 
 const MyPlaceCard = ({spot}) => {
 
@@ -44,7 +45,8 @@ const MyPlaceCard = ({spot}) => {
           </div>
 
           <div className="flex items-center justify-between border-t-2 py-3 !mt-3">
-            <div className="opacity-70">
+            <div className="opacity-70 flex gap-1 items-center">
+            <TiWeatherPartlySunny />
               <p>{seasonality}</p>
             </div>
             <div>

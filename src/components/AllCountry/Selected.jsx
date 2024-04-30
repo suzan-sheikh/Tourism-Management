@@ -29,7 +29,6 @@ const Selected = () => {
         setData(data);
       });
   }, [name]);
-
   return (
     <>
       <div className="py-10">
@@ -71,8 +70,8 @@ const Selected = () => {
                   </div>
 
                   <div className="space-y-2 p-3">
-                    <h1 className="line-clamp-1 font-bold text-3xl text-center text-black">
-                      {item.name}
+                    <h1 className="line-clamp-1 font-bold text-2xl text-center text-black">
+                      {item.spot_name}
                     </h1>
                     <div className="">
                       <div className="flex items-center justify-center gap-1">

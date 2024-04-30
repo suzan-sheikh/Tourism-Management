@@ -7,11 +7,14 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import { Helmet } from "react-helmet";
+import { TiWeatherPartlySunny } from "react-icons/ti";
 
 const Places = () => {
   const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sortBy, setSortBy] = useState([]);
+
+  console.log(item);
 
   const handleType = () => {};
 
@@ -132,7 +135,8 @@ const Places = () => {
                 </div>
 
                 <div className="flex items-center justify-between border-t-2 py-3 !mt-3">
-                  <div className="opacity-70">
+                  <div className="opacity-70 flex gap-2 items-center">
+                  <TiWeatherPartlySunny />
                     <p>{spot.seasonality}</p>
                   </div>
                   <div>
