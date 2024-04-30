@@ -1,24 +1,28 @@
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { FcOvertime } from "react-icons/fc";
-import { FaChildren } from "react-icons/fa6";
+import { FaChildren } from "react-icons/fa";
 import Loader from "../../pages/Loader";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Typewriter } from 'react-simple-typewriter';
+import { Typewriter } from "react-simple-typewriter";
 
 const Places = () => {
   const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [sortBy, setSortBy] = useState([]); 
-
+  const [sortOption, setSortOption] = useState("name"); // Default sort option
 
   const handleType = (count) => {
+    console.log(count);
   };
 
   const handleDone = () => {
+    console.log(`Typewriter animation done!`);
   };
 
+  const handleSortChange = (e) => {
+    setSortOption(e.target.value);
+  };
 
   useEffect(() => {
     AOS.init({
@@ -28,46 +32,46 @@ const Places = () => {
     });
 
     fetch("https://server-gold-five.vercel.app/spot")
-      .then((res) => {
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
         setItem(data);
         setLoading(false);
       });
   }, []);
 
-
-  const sortAllPlace = (field) => {
-    const sortedPlace = [...item].sort((a, b) => {
-      if (a[field] < b[field]) return 1;
-      if (a[field] > b[field]) return -1;
-      return 0;
-    });
-    setItem(sortedPlace);
-  };
-
-  const handleSortChange = (e) => {
-    setSortBy(e.target.value);
-    sortAllPlace(e.target.value);
-  };
-
-
-
-
   if (loading) {
     return <Loader />;
   }
 
+  // Sorting logic
+  const sortedItems = [...item].sort((a, b) => {
+    if (sortOption === "name") {
+      return a.name.localeCompare(b.name);
+    } else if (sortOption === "time") {
+      return a.time.localeCompare(b.time);
+    } else if (sortOption === "totalVisitor") {
+      return a.totalVisitor - b.totalVisitor;
+    } else if (sortOption === "cost") {
+      return a.cost - b.cost;
+    }
+    return 0;
+  });
+
   return (
     <div className="py-10">
       <section data-aos="fade-up" className="container mt-24">
-
-      <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-xl font-bold">
-            You Add Tourist Spots{' '}
-            <span style={{ color: 'red', fontWeight: 'bold' }}>
+        <div className="flex justify-between mb-4">
+          <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-3xl font-bold">
+            You Add Tourist Spots{" "}
+            <span style={{ color: "red", fontWeight: "bold" }}>
               <Typewriter
-                words={['Bangladesh', 'Thailand', 'Indonesia', 'Vietnam', 'Malaysia!']}
+                words={[
+                  "Bangladesh",
+                  "Thailand",
+                  "Indonesia",
+                  "Vietnam",
+                  "Malaysia!",
+                ]}
                 loop={10}
                 cursor
                 cursorStyle="_"
@@ -79,20 +83,23 @@ const Places = () => {
               />
             </span>
           </h1>
-
-
-
-        <div className="flex justify-center items-center mb-4">
-        <select value={sortBy} onChange={handleSortChange}  className="bg-base-200 hover:bg-base-400 text-xl select select-bordered ">
-          <option value="id">Select Your Choice</option>
-          <option value="cost">cost</option>
-          <option value="totalVisitor">Total Visitor</option>
-          <option value="time">Travel Days</option>
-        </select>
+          <div>
+            <select
+              value={sortOption}
+              onChange={handleSortChange}
+              className="p-2 border rounded-md"
+            >
+              <option value="name">Sort by Name</option>
+              <option value="time">Sort by Time</option>
+              <option value="totalVisitor">Sort by Total Visitors</option>
+              <option value="cost">Sort by Cost</option>
+            </select>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {item.map((spot) => (
+          {sortedItems.map((spot) => (
+            
             <div
               key={spot.id_id}
               className="shadow-2xl transition-all duration-500 hover:shadow-xl cursor-pointer rounded-xl"
@@ -112,16 +119,13 @@ const Places = () => {
                 <div className="">
                   <div className="flex items-center justify-start gap-1">
                     <FcOvertime className="text-md" />
-                    <span className="text-red-500 font-black">{spot.time}</span>
-                    <p className="line-clamp-2 text-md">                    
-                    Days</p>
+                    <p className="line-clamp-2 text-md">{spot.time}</p>
                   </div>
                 </div>
                 <div className="">
                   <div className="flex items-center gap-2 opacity-70">
                     <FaChildren className="text-md" />
-                    <p>Visitor Per Yer - </p>
-                    <span className="text-md text-red-500 font-black">{spot.totalVisitor}</span>
+                    <span className="text-md">{spot.totalVisitor}</span>
                   </div>
                 </div>
 
@@ -143,6 +147,12 @@ const Places = () => {
                   </NavLink>
                 </div>
               </div>
+
+
+
+
+
+
             </div>
           ))}
         </div>
