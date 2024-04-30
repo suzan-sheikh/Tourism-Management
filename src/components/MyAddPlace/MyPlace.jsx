@@ -11,7 +11,7 @@ const MyPlace = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`https://server-gold-five.vercel.app/mySpot/${user.email}`)
+      fetch(`http://localhost:4000/mySpot/${user.email}`)
         .then((res) => {
           if (!res.ok) {
             throw new Error('Failed to fetch');

@@ -32,7 +32,7 @@ const AddCountry = () => {
 
 
     // send data to server
-    fetch('https://server-gold-five.vercel.app/country', {
+    fetch('http://localhost:4000/country', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

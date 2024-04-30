@@ -15,7 +15,7 @@ const MyListPage = () => {
   const [control, setControl] = useState([false]);
 
   useEffect(() => {
-    fetch(`https://server-gold-five.vercel.app/mySpot/${user.email}`)
+    fetch(`http://localhost:4000/mySpot/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
@@ -36,7 +36,7 @@ const MyListPage = () => {
     }).then((result) => {
       if (result.isConfirmed) {
           
-      fetch(`https://server-gold-five.vercel.app/delet/${id}`, {
+      fetch(`http://localhost:4000/delet/${id}`, {
           method: 'DELETE'
       } )
       .then(res => res.json())

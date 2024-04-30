@@ -42,8 +42,8 @@ const Register = () => {
       .then(() => {
         updateUserProfile(name, imgUrl)
         .then((result) => {
-          setLoading(false);
           console.log(result);
+          setLoading(false);
           navigate(form);
           toast.success("Register Successfully");
         });

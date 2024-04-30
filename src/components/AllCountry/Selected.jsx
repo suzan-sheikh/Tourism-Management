@@ -2,6 +2,8 @@ import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Selected = () => {
   const handleType = (count) => {
@@ -18,12 +20,19 @@ const Selected = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`https://server-gold-five.vercel.app/allCountry/${name}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, [name]);
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    fetch(`http://localhost:4000/allCountry/${name}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setData(data);
+    });
+}, [name]);
+
 
   return (
     <>
@@ -61,7 +70,7 @@ const Selected = () => {
                 <div className="shadow-2xl transition-all duration-500 hover:shadow-xl cursor-pointer rounded-xl border-2">
                   <div className="overflow-hidden rounded-xl">
                   <img
-                    src="https://www.indoasia-tours.com/wp-content/uploads/2016/06/bangladesh.jpg"
+                    src={item.image_url}
                     alt="No image"
                     className="mx-auto h-[220px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110 rounded-xl"
                   />

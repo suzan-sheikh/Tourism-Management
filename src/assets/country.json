@@ -1,0 +1,32 @@
+[
+  {
+    "country": "Bangladesh",
+    "description": "Bangladesh, located in South Asia, is known for its lush greenery, rich cultural heritage, and delicious cuisine.",
+    "imgURL": "https://i.ytimg.com/vi/TGWtROTKbPo/maxresdefault.jpg"
+  },
+  {
+    "country": "Thailand",
+    "description": "Thailand, known as the Land of Smiles, is a Southeast Asian country famous for its beautiful beaches, rich culture, and delicious cuisine.",
+    "imgURL": "https://images.ctfassets.net/opz1rk40r4ou/6YVHsFQjMZHyG0FnPiAK5C/67b049398e091e7c951c73702b900a96/Thailand_National_Day_Parade_m17033.jpg?w=2000&q=90&fm=jpg"
+  },
+  {
+    "country": "Indonesia",
+    "description": "Indonesia, the largest archipelago in the world, is known for its stunning natural landscapes, diverse cultures, and ancient temples.",
+    "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPD53mIvcLvg7Sif76J0j2OZjMiaDbLF36jisSaPQICw&s"
+  },
+  {
+    "country": "Malaysia",
+    "description": "Malaysia, located in Southeast Asia, is renowned for its diverse culture, stunning islands, and delicious street food.",
+    "imgURL": "https://c4.wallpaperflare.com/wallpaper/358/784/965/cityscape-petronas-towers-kuala-lumpur-malaysia-wallpaper-preview.jpg"
+  },
+  {
+    "country": "Vietnam",
+    "description": "Vietnam, located on the eastern Indochinese Peninsula, is known for its bustling cities, lush countryside, and rich history.",
+    "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRJY88mP69vCXf4j-Jm-3-r1fQOZWZOWBx0ckc6V5AB5PO-kF4NSn6mFyMw6K0psfIKH4&usqp=CAU"
+  },
+  {
+    "country": "Cambodia",
+    "description": "Cambodia, home to the magnificent Angkor Wat, is known for its ancient temples, vibrant markets, and rich cultural heritage.",
+    "imgURL": "https://c4.wallpaperflare.com/wallpaper/538/401/299/panoramas-buddhism-temple-mist-wallpaper-preview.jpg"
+  }
+]

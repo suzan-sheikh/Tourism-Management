@@ -26,16 +26,6 @@ const AuthContextProvider = ({ children }) => {
   // userState
   const [user, setUser] = useState(null);
 
-
-
-
-
-
-
-  
-
-
-
   // loadingState
   const [loading, setLoading] = useState(true);
 
@@ -86,18 +76,6 @@ const AuthContextProvider = ({ children }) => {
       });
   };
 
-  // observer
-  // useEffect(() => {
-  //   const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-  //     //  console.log('user spi is active', currentUser);
-  //     setUser(currentUser);
-  //     setLoading(false);
-  //   });
-  //   return () => {
-  //     return unSubscribe();
-  //   };
-  // }, []);
-
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
@@ -109,9 +87,6 @@ const AuthContextProvider = ({ children }) => {
       return unsubscribe()
     }
   }, [])
-
-
-
 
 
   // context data

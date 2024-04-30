@@ -20,7 +20,7 @@ const Country = () => {
   console.log(item);
 
   useEffect(() => {
-    fetch("https://server-gold-five.vercel.app/country")
+    fetch("http://localhost:4000/country")
       .then((res) => res.json())
       .then((data) => {
         setItem(data);

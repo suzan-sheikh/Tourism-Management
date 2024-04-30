@@ -1,0 +1,277 @@
+[
+  {
+    "spot_name": "Sundarbans",
+    "country": "Bangladesh",
+    "location": "Khulna Division",
+    "description": "World's largest mangrove forest. Home to the Bengal tiger, diverse wildlife, and unique ecosystems.",
+    "cost": 1000,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1551615577-1c7e180a77ac?q=80&w=1567&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Cox's Bazar",
+    "country": "Bangladesh",
+    "location": "Chittagong Division",
+    "description": "Longest natural sea beach in the world. Sandy shores, serene waters, and vibrant local culture.",
+    "cost": 800,
+    "seasonality": "Summer",
+    "image_url": "https://images.unsplash.com/photo-1619177383949-f03975e50b19?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Rangamati",
+    "country": "Bangladesh",
+    "location": "Chittagong Hill Tracts",
+    "description": "Scenic hill district with lush greenery, tranquil lakes, and indigenous communities. Ideal for nature lovers and adventure seekers.",
+    "cost": 600,
+    "seasonality": "Year-round",
+    "image_url": "https://images.unsplash.com/photo-1712047005091-ef7378664ff2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Bandarban",
+    "country": "Bangladesh",
+    "location": "Chittagong Hill Tracts",
+    "description": "Picturesque hill town surrounded by misty mountains, waterfalls, and tribal villages. Popular for trekking and cultural experiences.",
+    "cost": 700,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1585123388867-3bfe6dd4bdbf?q=80&w=1401&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Saint Martin's Island",
+    "country": "Bangladesh",
+    "location": "Bay of Bengal",
+    "description": "Tiny coral island with pristine beaches, clear turquoise waters, and vibrant marine life. Perfect for snorkeling and relaxation.",
+    "cost": 900,
+    "seasonality": "Summer",
+    "image_url": "https://images.unsplash.com/photo-1665805397368-d3365df16e8b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+
+  {
+    "spot_name": "Grand Palace",
+    "country": "Thailand",
+    "location": "Bangkok",
+    "description": "Historical royal residence in Bangkok. Exquisite architecture, ornate detail, and religious significance.",
+    "cost": 1000,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1693501107615-a412a9e29ccf?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Doi Suthep",
+    "country": "Thailand",
+    "location": "Chiang Mai",
+    "description": "Sacred mountain temple. Stunning views of Chiang Mai. Spiritual and cultural significance.",
+    "cost": 500,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Ayutthaya Historical Park",
+    "country": "Thailand",
+    "location": "Ayutthaya",
+    "description": "UNESCO site. Ancient ruins, historic remnants. Cultural exploration, biking, and photography opportunities.",
+    "cost": 200,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1563492065599-3520f775eeed?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Patong Beach",
+    "country": "Thailand",
+    "location": "Phuket",
+    "description": "Iconic beach destination. Vibrant nightlife, water sports, and sun-soaked relaxation.",
+    "cost": 800,
+    "seasonality": "Summer",
+    "image_url": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Maya Bay",
+    "country": "Thailand",
+    "location": "Phi Phi Islands",
+    "description": "Stunning bay on Ko Phi Phi Le. Crystal-clear waters, limestone cliffs, and movie fame.",
+    "cost": 1200,
+    "seasonality": "Summer",
+    "image_url": "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+
+  {
+    "spot_name": "Bali",
+    "country": "Indonesia",
+    "location": "Bali",
+    "description": "Famous island destination known for its beaches, coral reefs, and vibrant culture.",
+    "cost": 800,
+    "seasonality": "Summer",
+    "image_url": "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Borobudur Temple",
+    "country": "Indonesia",
+    "location": "Magelang, Central Java",
+    "description": "One of the largest Buddhist temples in the world. Rich in history and architectural beauty.",
+    "cost": 300,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1620549146396-9024d914cd99?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Komodo National Park",
+    "country": "Indonesia",
+    "location": "East Nusa Tenggara",
+    "description": "Home to the Komodo dragon, world-class diving sites, and stunning landscapes.",
+    "cost": 1000,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1622050956578-94fd044a0ada?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Raja Ampat Islands",
+    "country": "Indonesia",
+    "location": "West Papua",
+    "description": "A paradise for divers and nature enthusiasts. Pristine coral reefs and marine biodiversity.",
+    "cost": 1200,
+    "seasonality": "Summer",
+    "image_url": "https://images.unsplash.com/photo-1576019095542-78885bcf4d20?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Yogyakarta",
+    "country": "Indonesia",
+    "location": "Yogyakarta Special Region",
+    "description": "Cultural heart of Java. Home to ancient temples, palaces, and traditional arts.",
+    "cost": 500,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?q=80&w=1406&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+
+  {
+    "spot_name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "location": "Kuala Lumpur",
+    "description": "Vibrant capital city known for its modern skyline, iconic Petronas Twin Towers, and diverse cultural attractions.",
+    "cost": 600,
+    "seasonality": "Year-round",
+    "image_url": "https://images.unsplash.com/photo-1592723905426-1181bf431d3a?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Langkawi",
+    "country": "Malaysia",
+    "location": "Langkawi Island",
+    "description": "Tropical paradise featuring stunning beaches, lush rainforests, and duty-free shopping.",
+    "cost": 800,
+    "seasonality": "Summer",
+    "image_url": "https://images.unsplash.com/photo-1622665645573-b0b5dea09d98?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Penang",
+    "country": "Malaysia",
+    "location": "Penang Island",
+    "description": "Historic island known for its colonial architecture, vibrant street food scene, and UNESCO World Heritage Site, George Town.",
+    "cost": 500,
+    "seasonality": "Year-round",
+    "image_url": "https://images.unsplash.com/photo-1592811069126-7e43dde028eb?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Cameron Highlands",
+    "country": "Malaysia",
+    "location": "Pahang",
+    "description": "Hill station retreat famous for its tea plantations, cool climate, and scenic hiking trails.",
+    "cost": 700,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1592080231635-58456a85c693?q=80&w=1511&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Taman Negara National Park",
+    "country": "Malaysia",
+    "location": "Pahang",
+    "description": "One of the oldest rainforests in the world, teeming with biodiversity, canopy walks, and river cruises.",
+    "cost": 900,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1596051723702-b56e223bfa66?q=80&w=1460&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+
+  {
+    "spot_name": "Ha Long Bay",
+    "country": "Vietnam",
+    "location": "Quang Ninh Province",
+    "description": "UNESCO World Heritage Site known for its emerald waters, towering limestone islands, and traditional junk boat cruises.",
+    "cost": 700,
+    "seasonality": "Summer",
+    "image_url": "https://images.unsplash.com/photo-1605036687969-9c2878c7395b?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "location": "Ho Chi Minh City",
+    "description": "Formerly Saigon, bustling metropolis famed for its French colonial landmarks, vibrant street food, and bustling markets.",
+    "cost": 600,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1535952548450-d7447587e733?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Hoi An Ancient Town",
+    "country": "Vietnam",
+    "location": "Quang Nam Province",
+    "description": "Well-preserved trading port with centuries-old architecture, lantern-lit streets, and riverside charm.",
+    "cost": 500,
+    "seasonality": "Summer",
+    "image_url": "https://images.unsplash.com/photo-1691927644510-e8cc4a2a31ee?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Phong Nha Caves",
+    "country": "Vietnam",
+    "location": "Quang Binh Province",
+    "description": "Karst cave system featuring immense chambers, underground rivers, and stunning limestone formations.",
+    "cost": 800,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1698658989153-a60a73549b4a?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Mekong Delta",
+    "country": "Vietnam",
+    "location": "Mekong Delta Region",
+    "description": "Vast network of rivers, canals, and floating markets offering a glimpse into traditional Vietnamese rural life.",
+    "cost": 900,
+    "seasonality": "Summer",
+    "image_url": "https://images.unsplash.com/photo-1580630873708-e0475b1856c4?q=80&w=1433&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+
+  {
+    "spot_name": "Angkor Wat",
+    "country": "Cambodia",
+    "location": "Siem Reap Province",
+    "description": "Largest religious monument in the world, showcasing Khmer architecture and ancient temple ruins.",
+    "cost": 600,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1566706546199-a93ba33ce9f7?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Siem Reap",
+    "country": "Cambodia",
+    "location": "Siem Reap Province",
+    "description": "Gateway to Angkor temples, with bustling markets, cultural performances, and vibrant nightlife.",
+    "cost": 500,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1549024676-eabbf58fe7ea?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Phnom Penh",
+    "country": "Cambodia",
+    "location": "Phnom Penh",
+    "description": "Capital city with a mix of French colonial architecture, royal palaces, and tragic Khmer Rouge history.",
+    "cost": 600,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1490077476659-095159692ab5?q=80&w=2651&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Kep",
+    "country": "Cambodia",
+    "location": "Kep Province",
+    "description": "Coastal town famous for its crab market, colonial architecture, and relaxed seaside vibe.",
+    "cost": 400,
+    "seasonality": "Winter",
+    "image_url": "https://plus.unsplash.com/premium_photo-1690959654865-a334658cd42d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "spot_name": "Battambang",
+    "country": "Cambodia",
+    "location": "Battambang Province",
+    "description": "Charming riverside town known for its French colonial architecture, bamboo train, and bat caves.",
+    "cost": 300,
+    "seasonality": "Winter",
+    "image_url": "https://images.unsplash.com/photo-1506781961370-37a89d6b3095?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+]

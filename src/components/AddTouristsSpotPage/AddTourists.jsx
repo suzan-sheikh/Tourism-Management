@@ -49,7 +49,7 @@ const AddTourists = () => {
 
 
     // send data to server
-    fetch('https://server-gold-five.vercel.app/spot', {
+    fetch('http://localhost:4000/spot', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -178,9 +178,7 @@ const AddTourists = () => {
                 {...register("totalVisitor", { required: true })}
               />
               {errors.totalVisitor && <span>This field is required</span>}
-            </div>
-            {
-              user.email && 
+            </div>           
               <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">User Email :</label>
               <input
@@ -194,10 +192,6 @@ const AddTourists = () => {
               />
               {errors.email && <span>This field is required</span>}              
             </div> 
-            }
-
-
-
 
             <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">User Name :</label>
