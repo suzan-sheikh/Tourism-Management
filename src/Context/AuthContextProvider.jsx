@@ -21,8 +21,6 @@ const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 
 const AuthContextProvider = ({ children }) => {
-  
-  
   // userState
   const [user, setUser] = useState(null);
 
@@ -40,9 +38,7 @@ const AuthContextProvider = ({ children }) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: image,
-    }).then(() => {
-      
-    });
+    }).then(() => {});
   };
 
   // loginUser
@@ -76,18 +72,16 @@ const AuthContextProvider = ({ children }) => {
       });
   };
 
-
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, currentUser => {
-      setUser(currentUser)
-      console.log('CurrentUser-->', currentUser)
-      setLoading(false)
-    })
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      console.log("CurrentUser-->", currentUser);
+      setLoading(false);
+    });
     return () => {
-      return unsubscribe()
-    }
-  }, [])
-
+      return unsubscribe();
+    };
+  }, []);
 
   // context data
   const authInfo = {

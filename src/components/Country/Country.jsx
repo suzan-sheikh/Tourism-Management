@@ -3,21 +3,14 @@ import { Typewriter } from "react-simple-typewriter";
 import { NavLink } from "react-router-dom";
 
 const Country = () => {
-  const handleType = (count) => {
-    // access word count number
-    console.log(count);
+  const handleType = () => {
   };
 
   const handleDone = () => {
-    console.log(`Done after 5 loops!`);
   };
-
-
-
 
   const [item, setItem] = useState([]);
 
-  console.log(item);
 
   useEffect(() => {
     fetch("https://server-gold-five.vercel.app/country")
@@ -71,9 +64,7 @@ const Country = () => {
                       <h1 className="line-clamp-1 font-bold text-md text-black">
                         {data.country}
                       </h1>
-                      <p className="text-justify text-sm">
-                        {data.description}
-                      </p>
+                      <p className="text-justify text-sm">{data.description}</p>
                     </div>
                   </div>
                 </NavLink>

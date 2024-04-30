@@ -1,15 +1,11 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import UseAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 const AddTourists = () => {
-
-  const {user} = UseAuth() || {};
+  const { user } = UseAuth() || {};
   const email = user.email;
-
-  console.log(email);
-
-  console.log(user);
 
   const {
     register,
@@ -46,35 +42,36 @@ const AddTourists = () => {
       imgURL,
     };
 
-
-    console.log(newSpot);
-
-
     // send data to server
-    fetch('https://server-gold-five.vercel.app/spot', {
-      method: 'POST',
+    fetch("https://server-gold-five.vercel.app/spot", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(newSpot)
+      body: JSON.stringify(newSpot),
     })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      if(data.insertedId){
-        Swal.fire({
-          title: "success!",
-          text: "Added Tourists Spot Successfully",
-          icon: "success",
-          confirmButtonText: "Ok",
-        });
-        reset();
-      }      
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            title: "success!",
+            text: "Added Tourists Spot Successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+          reset();
+        }
+      });
   };
 
   return (
     <div>
+              <Helmet>
+          <meta charSet="utf-8" />
+          <title>Add Tourist Sport</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+
       <section className="p-6 mt-20 container">
         <h2 className="text-center text-2xl font-bold">Add Tourists Spot : </h2>
         <form
@@ -86,7 +83,7 @@ const AddTourists = () => {
           <div className="grid grid-cols-6 gap-2 col-span-full lg:col-span-3">
             <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">
-                Tourists Sport Name : 
+                Tourists Sport Name :
               </label>
               <input
                 type="text"
@@ -180,8 +177,8 @@ const AddTourists = () => {
                 {...register("totalVisitor", { required: true })}
               />
               {errors.totalVisitor && <span>This field is required</span>}
-            </div>           
-              <div className="col-span-full sm:col-span-3 text-left">
+            </div>
+            <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">User Email :</label>
               <input
                 type="email"
@@ -192,8 +189,8 @@ const AddTourists = () => {
                 defaultValue={email}
                 readOnly
               />
-              {errors.email && <span>This field is required</span>}              
-            </div> 
+              {errors.email && <span>This field is required</span>}
+            </div>
 
             <div className="col-span-full sm:col-span-3 text-left">
               <label className="text-sm text-left mb-2">User Name :</label>

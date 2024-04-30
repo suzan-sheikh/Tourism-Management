@@ -68,7 +68,8 @@ const Testimonial = () => {
           <div className="text-center mb-4 max-w-[400px] mx-auto">
             <h1 className="text-3xl font-bold">Testimonial</h1>
             <p className="text-md text-gray-400 mt-2">
-              Really thank you for sharing your feedback with us It means a lot to hear your support for our efforts.
+              Really thank you for sharing your feedback with us It means a lot
+              to hear your support for our efforts.
             </p>
           </div>
           {/* testimonial section */}
@@ -83,11 +84,11 @@ const Testimonial = () => {
                   <div key={id} className="my-6">
                     <div className="flex flex-col justify-center items-center gap-4 text-center shadow-lg p-4 mx-4 rounded-xl relative">
                       <div className="w-14 h-14">
-                      <img
-                        src={img}
-                        alt=""
-                        className="rounded-full block mx-auto w-14 h-14"
-                      />
+                        <img
+                          src={img}
+                          alt=""
+                          className="rounded-full block mx-auto w-14 h-14"
+                        />
                       </div>
 
                       <h1 className="text-xl font-bold">{name}</h1>

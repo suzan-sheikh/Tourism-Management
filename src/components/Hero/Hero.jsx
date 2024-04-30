@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Hero = () => {
-
   React.useEffect(() => {
     AOS.init({
       offset: 100,
@@ -13,9 +12,6 @@ const Hero = () => {
     });
     AOS.refresh();
   }, []);
-
-
-
 
   const [priceValue, setPriceValue] = React.useState(30);
 

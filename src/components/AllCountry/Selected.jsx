@@ -2,17 +2,14 @@ import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Selected = () => {
-  const handleType = (count) => {
-    // access word count number
-    console.log(count);
+  const handleType = () => {
   };
 
   const handleDone = () => {
-    console.log(`Done after 5 loops!`);
   };
 
   const { name } = useParams();
@@ -22,26 +19,23 @@ const Selected = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      easing: 'ease-in-out',
-      once: true
+      easing: "ease-in-out",
+      once: true,
     });
 
     fetch(`https://server-gold-five.vercel.app/allCountry/${name}`)
-    .then((res) => res.json())
-    .then((data) => {
-      setData(data);
-    });
-}, [name]);
-
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, [name]);
 
   return (
     <>
       <div className="py-10">
         <section data-aos="fade-up" className="container mt-24 ">
-
-          
           <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-3xl font-bold">
-            Popular Country 
+            Popular Country
             <span className="ml-2" style={{ color: "red", fontWeight: "bold" }}>
               {/* Style will be inherited from the parent element */}
               <Typewriter
@@ -69,12 +63,12 @@ const Selected = () => {
               <div key={item._id}>
                 <div className="shadow-2xl transition-all duration-500 hover:shadow-xl cursor-pointer rounded-xl border-2">
                   <div className="overflow-hidden rounded-xl">
-                  <img
-                    src={item.image_url}
-                    alt="No image"
-                    className="mx-auto h-[220px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110 rounded-xl"
-                  />
-                </div>
+                    <img
+                      src={item.image_url}
+                      alt="No image"
+                      className="mx-auto h-[220px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-110 rounded-xl"
+                    />
+                  </div>
 
                   <div className="space-y-2 p-3">
                     <h1 className="line-clamp-1 font-bold text-3xl text-center text-black">
@@ -82,19 +76,21 @@ const Selected = () => {
                     </h1>
                     <div className="">
                       <div className="flex items-center justify-center gap-1">
-                        <p className="text-red-600 font-bold">Country: </p>                      
+                        <p className="text-red-600 font-bold">Country: </p>
                         <p className="line-clamp-2 text-md">{item.country}</p>
                       </div>
                     </div>
                     <div className="">
                       <div className="flex items-center justify-center gap-1">
-                        <p className="text-red-600 font-bold">Season: </p>                      
-                        <p className="line-clamp-2 text-md">{item.seasonality}</p>
+                        <p className="text-red-600 font-bold">Season: </p>
+                        <p className="line-clamp-2 text-md">
+                          {item.seasonality}
+                        </p>
                       </div>
                     </div>
                     <div className="">
                       <div className="flex items-center justify-center gap-2 opacity-70">
-                      <CiLocationOn className="text-sm text-red-600" /> 
+                        <CiLocationOn className="text-sm text-red-600" />
                         <span className="text-md">{item.location}</span>
                       </div>
                     </div>

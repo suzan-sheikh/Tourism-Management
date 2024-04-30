@@ -30,7 +30,9 @@ const Banner = () => {
                   data-aos="fade-up"
                   className="text-sm text-gray-500 tracking-wide leading-8"
                 >
-                  Over 10 years ago now, two close friends went for a trip to Iceland – great adventures began and the seed to ALLMYNE started forming!
+                  Over 10 years ago now, two close friends went for a trip to
+                  Iceland – great adventures began and the seed to ALLMYNE
+                  started forming!
                   <br />
                 </p>
                 <div data-aos="zoom-in" className="grid grid-cols-2 gap-6">

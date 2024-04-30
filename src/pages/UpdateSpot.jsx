@@ -1,20 +1,19 @@
-
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
-import { useEffect} from "react";
+import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const UpdateSpot = () => {
-    
-    const { id } = useParams();  
+  const { id } = useParams();
 
-    useEffect(() => {
-        fetch(`https://server-gold-five.vercel.app/singleSpot/${id}`)
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-          });
-      }, [id]);
+  useEffect(() => {
+    fetch(`https://server-gold-five.vercel.app/singleSpot/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }, [id]);
 
   const {
     register,
@@ -36,44 +35,55 @@ const UpdateSpot = () => {
     } = data;
 
     const updateData = {
-        name,
-        country,
-        location,
-        description,
-        cost,
-        seasonality,
-        time,
-        totalVisitor,
-        imgURL,
+      name,
+      country,
+      location,
+      description,
+      cost,
+      seasonality,
+      time,
+      totalVisitor,
+      imgURL,
     };
 
     // send data to server
     fetch(`https://server-gold-five.vercel.app/updateSpot/${id}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(updateData)
+      body: JSON.stringify(updateData),
     })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      if(data.modifiedCount > 0){
-        Swal.fire({
-          title: "success!",
-          text: "Update Successfully",
-          icon: "success",
-          confirmButtonText: "Ok",
-        });
-        reset();
-      }      
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "success!",
+            text: "Update Successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+          reset();
+        }
+      });
   };
 
   return (
     <div>
+
+
+
+<Helmet>
+          <meta charSet="utf-8" />
+          <title>Update Sport</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+
       <section className="p-6 mt-20 container w-2/3">
-        <h2 className="text-center text-2xl font-bold">Update Your Added Spot : </h2>
+        <h2 className="text-center text-2xl font-bold">
+          Update Your Added Spot :{" "}
+        </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
           noValidate=""

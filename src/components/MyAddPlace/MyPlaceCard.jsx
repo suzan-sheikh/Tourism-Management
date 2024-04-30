@@ -4,7 +4,6 @@ import { FaChildren } from "react-icons/fa6";
 import PropTypes from 'prop-types'; 
 
 const MyPlaceCard = ({spot}) => {
-  console.log(spot);
 
   const {
     _id,

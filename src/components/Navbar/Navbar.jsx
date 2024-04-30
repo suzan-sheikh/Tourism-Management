@@ -6,7 +6,7 @@ import UseAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const {user, logout} = UseAuth();
+  const { user, logout } = UseAuth();
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -109,40 +109,37 @@ const Navbar = () => {
               <ul className="flex items-center gap-6 ">{navLink}</ul>
             </div>
             <div className="flex items-center gap-4 justify-center">
-
-
               {user ? (
-              <div className="flex items-center gap-2">
-                <div className="rounded-full cursor-pointer">
-                  <img
-                    className="w-10 h-10 rounded-full"
-                    src={user.photoURL}
-                    alt={user.displayName}
-                    title={user.displayName}
-                  />
+                <div className="flex items-center gap-2">
+                  <div className="rounded-full cursor-pointer">
+                    <img
+                      className="w-10 h-10 rounded-full"
+                      src={user.photoURL}
+                      alt={user.displayName}
+                      title={user.displayName}
+                    />
+                  </div>
+                  <button
+                    className="btn btn-sm btn-neutral text-white"
+                    onClick={logout}
+                  >
+                    Logout
+                  </button>
                 </div>
-                <button
-                  className="btn btn-sm btn-neutral text-white"
-                  onClick={logout}
-                >
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <div className="flex items-center gap-2">
-              <Link to="/login">
-                <button className="btn btn-sm btn-neutral text-white">
-                  Login
-                </button>
-              </Link>
-              <Link to="/register">
-                <button className="btn btn-sm btn-neutral text-white">
-                Register
-                </button>
-              </Link>
-            </div>
-              
-            )}
+              ) : (
+                <div className="flex items-center gap-2">
+                  <Link to="/login">
+                    <button className="btn btn-sm btn-neutral text-white">
+                      Login
+                    </button>
+                  </Link>
+                  <Link to="/register">
+                    <button className="btn btn-sm btn-neutral text-white">
+                      Register
+                    </button>
+                  </Link>
+                </div>
+              )}
               <div>
                 <label className="swap swap-rotate">
                   {/* this hidden checkbox controls the state */}

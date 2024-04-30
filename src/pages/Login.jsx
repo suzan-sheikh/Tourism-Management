@@ -11,14 +11,7 @@ import UseAuth from "../Hooks/useAuth";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
 
-  const {
-    googleLogin,
-    setLoading,
-    githubSignIn,
-    loginUser
-  } = UseAuth();
-
-
+  const { googleLogin, setLoading, githubSignIn, loginUser } = UseAuth();
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -29,9 +22,7 @@ const Login = () => {
   const location = useLocation();
   const form = location?.state || "/";
 
-
-
-    const {
+  const {
     register,
     handleSubmit,
     reset,
@@ -39,8 +30,8 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const { email, password } = data; 
-    loginUser(email, password)    
+    const { email, password } = data;
+    loginUser(email, password)
       .then((result) => {
         setLoading(false);
         toast.success("Login Successfully");
@@ -49,11 +40,9 @@ const Login = () => {
       .catch((error) => {
         setLoading(false);
         toast.error("Email and Password not match");
-        console.log(error); 
+        console.log(error);
       });
   };
-
-
 
   const handleSignIn = (socialProvider) => {
     socialProvider()
@@ -61,6 +50,7 @@ const Login = () => {
         setLoading(false);
         toast.success("Login Successfully");
         if (result.user) navigate(form);
+        reset()
       })
       .catch((error) => {
         setLoading(false);
@@ -68,11 +58,6 @@ const Login = () => {
         console.error(error);
       });
   };
-
-
-
-
-
 
   return (
     <div

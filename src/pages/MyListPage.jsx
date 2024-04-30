@@ -5,14 +5,12 @@ import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
+import { Helmet } from "react-helmet";
+
 const MyListPage = () => {
   const { user } = UseAuth() || {};
 
-  console.log(user);
-
   const [item, setItem] = useState([]);
-
-  console.log(item);
 
   const [control, setControl] = useState([false]);
 
@@ -24,9 +22,7 @@ const MyListPage = () => {
       });
   }, [user, control]);
 
-
   const handleDelete = (id) => {
-
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -34,42 +30,40 @@ const MyListPage = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-          
-      fetch(`https://server-gold-five.vercel.app/delet/${id}`, {
-          method: 'DELETE'
-      } )
-      .then(res => res.json())
-      .then(data => {
-          console.log(data);
-          if(data.deletedCount > 0){
+        fetch(`https://server-gold-five.vercel.app/delet/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
               Swal.fire({
-                  title: "Deleted!",
-                  text: "Your file has been deleted.",
-                  icon: "success"
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
               });
 
-              setControl(!control)
-              
-          }
-      })
-
+              setControl(!control);
+            }
+          });
       }
-    })
-
-
-
-  }
-
+    });
+  };
 
   return (
     <div className="container mt-28">
-      
-        <div className="overflow-x-auto"> 
-          <table className="table">
-            <tbody>            
+
+<Helmet>
+          <meta charSet="utf-8" />
+          <title>My List</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+
+      <div className="overflow-x-auto">
+        <table className="table">
+          <tbody>
             {item?.map((i) => (
               <tr className="shadow-2xl" key={i._id}>
                 <td>
@@ -95,25 +89,26 @@ const MyListPage = () => {
                 </td>
                 <th>
                   <div className="flex gap-2 justify-center items-center">
+                    <Link to={`/update/${i._id}`}>
+                      <button className="btn btn-ghost btn-xs border-2 border-black">
+                        {" "}
+                        <FaPencil />
+                      </button>
+                    </Link>
 
-
-                        <Link to={`/update/${i._id}`}>
-                            <button className="btn btn-ghost btn-xs border-2 border-black"> <FaPencil /></button>                         
-                        </Link>                   
-
-
-                    <button onClick={() => handleDelete(i._id)}                     
-                    className="btn btn-ghost btn-xs border-2 border-black">
+                    <button
+                      onClick={() => handleDelete(i._id)}
+                      className="btn btn-ghost btn-xs border-2 border-black"
+                    >
                       <MdDelete />
                     </button>
                   </div>
                 </th>
               </tr>
             ))}
-            </tbody>
-          </table>
-        </div>
-
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

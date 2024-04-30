@@ -1,4 +1,4 @@
-import {useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
 import { IoIosEyeOff, IoMdEye } from "react-icons/io";
@@ -9,8 +9,7 @@ import "aos/dist/aos.css";
 import UseAuth from "../Hooks/useAuth";
 
 const Register = () => {
-  
-  const {createUser, updateUserProfile, setLoading, setUser} = UseAuth();
+  const { createUser, updateUserProfile, setLoading, setUser } = UseAuth();
   const [showPassword, setShowPassword] = useState(true);
 
   useEffect(() => {
@@ -40,13 +39,11 @@ const Register = () => {
 
     createUser(email, password)
       .then((user) => {
-        
-        updateUserProfile(name, imgUrl)
-        .then((result) => {
+        updateUserProfile(name, imgUrl).then((result) => {
           console.log(user);
           console.log(result);
           setLoading(false);
-          setUser({ ...user, displayName: name, photoURL: imgUrl });
+          // setUser({ ...user, displayName: name, photoURL: imgUrl });
           navigate(form);
           toast.success("Register Successfully");
         });

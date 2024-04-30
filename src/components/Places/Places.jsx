@@ -5,20 +5,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Typewriter } from 'react-simple-typewriter';
+import { Typewriter } from "react-simple-typewriter";
+import { Helmet } from "react-helmet";
 
 const Places = () => {
   const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [sortBy, setSortBy] = useState([]); 
+  const [sortBy, setSortBy] = useState([]);
 
+  const handleType = () => {};
 
-  const handleType = (count) => {
-  };
-
-  const handleDone = () => {
-  };
-
+  const handleDone = () => {};
 
   useEffect(() => {
     AOS.init({
@@ -37,7 +34,6 @@ const Places = () => {
       });
   }, []);
 
-
   const sortAllPlace = (field) => {
     const sortedPlace = [...item].sort((a, b) => {
       if (a[field] < b[field]) return 1;
@@ -52,43 +48,52 @@ const Places = () => {
     sortAllPlace(e.target.value);
   };
 
-
-
-
   if (loading) {
     return <Loader />;
   }
 
   return (
     <div className="py-10">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>All Place</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <section data-aos="fade-up" className="container mt-24">
-
-      <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-xl font-bold">
-            You Add Tourist Spots{' '}
-            <span style={{ color: 'red', fontWeight: 'bold' }}>
-              <Typewriter
-                words={['Bangladesh', 'Thailand', 'Indonesia', 'Vietnam', 'Malaysia!']}
-                loop={10}
-                cursor
-                cursorStyle="_"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-                onLoopDone={handleDone}
-                onType={handleType}
-              />
-            </span>
-          </h1>
-
-
+        <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-xl font-bold">
+          You Add Tourist Spots{" "}
+          <span style={{ color: "red", fontWeight: "bold" }}>
+            <Typewriter
+              words={[
+                "Bangladesh",
+                "Thailand",
+                "Indonesia",
+                "Vietnam",
+                "Malaysia!",
+              ]}
+              loop={10}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+              onLoopDone={handleDone}
+              onType={handleType}
+            />
+          </span>
+        </h1>
 
         <div className="flex justify-center items-center mb-4">
-        <select value={sortBy} onChange={handleSortChange}  className="bg-base-200 hover:bg-base-400 text-xl select select-bordered ">
-          <option value="id">Select Your Choice</option>
-          <option value="cost">cost</option>
-          <option value="totalVisitor">Total Visitor</option>
-          <option value="time">Travel Days</option>
-        </select>
+          <select
+            value={sortBy}
+            onChange={handleSortChange}
+            className="bg-base-200 hover:bg-base-400 text-xl select select-bordered "
+          >
+            <option value="id">Select Your Choice</option>
+            <option value="cost">cost</option>
+            <option value="totalVisitor">Total Visitor</option>
+            <option value="time">Travel Days</option>
+          </select>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -113,15 +118,16 @@ const Places = () => {
                   <div className="flex items-center justify-start gap-1">
                     <FcOvertime className="text-md" />
                     <span className="text-red-500 font-black">{spot.time}</span>
-                    <p className="line-clamp-2 text-md">                    
-                    Days</p>
+                    <p className="line-clamp-2 text-md">Days</p>
                   </div>
                 </div>
                 <div className="">
                   <div className="flex items-center gap-2 opacity-70">
                     <FaChildren className="text-md" />
                     <p>Visitor Per Yer - </p>
-                    <span className="text-md text-red-500 font-black">{spot.totalVisitor}</span>
+                    <span className="text-md text-red-500 font-black">
+                      {spot.totalVisitor}
+                    </span>
                   </div>
                 </div>
 
