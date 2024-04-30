@@ -52,7 +52,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
             isActive ? "text-primary border-b-4 border-primary" : "border-none"
           }
         >
-          MY LIST
+          My List
         </NavLink>
       </li>
     </>

@@ -137,7 +137,7 @@ const Login = () => {
             </div>
             <div className="relative">
               <div className="flex justify-between mb-2">
-                <label htmlFor="password" className="text-sm">
+                <label htmlFor="password" className="text-sm text-center">
                   Password
                 </label>
               </div>

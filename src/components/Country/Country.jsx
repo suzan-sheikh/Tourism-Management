@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { NavLink } from "react-router-dom";
+import AOS from "aos";
+import "animate.css";
+
 
 const Country = () => {
   const handleType = () => {
@@ -8,11 +11,11 @@ const Country = () => {
 
   const handleDone = () => {
   };
-
   const [item, setItem] = useState([]);
 
 
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     fetch("https://server-gold-five.vercel.app/country")
       .then((res) => res.json())
       .then((data) => {
@@ -23,7 +26,7 @@ const Country = () => {
   return (
     <>
       <div className="py-10">
-        <section data-aos="fade-up" className="container mt-24 ">
+        <section data-aos="flip-left" className="container mt-24 ">
           <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-3xl font-bold">
             <span style={{ color: "red", fontWeight: "bold" }}>
               {/* Style will be inherited from the parent element */}

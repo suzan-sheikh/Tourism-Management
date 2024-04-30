@@ -2,8 +2,14 @@ import TravelImg from "../../assets/travelbox.png";
 import { MdFlight, MdOutlineLocalHotel } from "react-icons/md";
 import { IoIosWifi } from "react-icons/io";
 import { IoFastFoodSharp } from "react-icons/io5";
+import AOS from "aos";
+import "animate.css";
+import { useEffect } from "react";
 
 const Banner = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <div className="min-h-[550px]">

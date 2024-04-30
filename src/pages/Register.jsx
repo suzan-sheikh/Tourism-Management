@@ -45,7 +45,6 @@ const Register = () => {
           setUser((prevUser) => { 
             return {...prevUser, displayName: name, photoURL: imgUrl }
           });
-          // setUser({ ...user, displayName: name, photoURL: imgUrl });
           navigate(form);
           toast.success("Register Successfully");
         });
@@ -131,7 +130,7 @@ const Register = () => {
           </div>
           <div className="relative">
             <div className="flex justify-between mb-2">
-              <label htmlFor="password" className="text-sm">
+              <label htmlFor="password" className="text-sm text-center">
                 Password
               </label>
             </div>

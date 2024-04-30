@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import Slider from "react-slick";
+import AOS from "aos";
+import "animate.css";
 
 const testimonialData = [
   {
@@ -60,6 +63,11 @@ const Testimonial = () => {
       },
     ],
   };
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+  
+  
   return (
     <>
       <div data-aos="fade-up" data-aos-duration="300" className="py-10">
