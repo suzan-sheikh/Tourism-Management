@@ -8,6 +8,8 @@ import Swal from "sweetalert2";
 const MyListPage = () => {
   const { user } = UseAuth() || {};
 
+  console.log(user);
+
   const [item, setItem] = useState([]);
 
   console.log(item);

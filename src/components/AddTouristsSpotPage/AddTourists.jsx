@@ -9,6 +9,8 @@ const AddTourists = () => {
 
   console.log(email);
 
+  console.log(user);
+
   const {
     register,
     handleSubmit,

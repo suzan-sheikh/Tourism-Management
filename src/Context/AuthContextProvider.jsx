@@ -41,7 +41,7 @@ const AuthContextProvider = ({ children }) => {
       displayName: name,
       photoURL: image,
     }).then(() => {
-      setUser({ ...user, displayName: name, photoURL: image });
+      
     });
   };
 

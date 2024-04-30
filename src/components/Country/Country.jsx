@@ -72,7 +72,7 @@ const Country = () => {
                         {data.country}
                       </h1>
                       <p className="text-justify text-sm">
-                        L{data.description}
+                        {data.description}
                       </p>
                     </div>
                   </div>

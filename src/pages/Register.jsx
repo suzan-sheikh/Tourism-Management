@@ -10,7 +10,7 @@ import UseAuth from "../Hooks/useAuth";
 
 const Register = () => {
   
-  const {createUser, updateUserProfile, setLoading} = UseAuth();
+  const {createUser, updateUserProfile, setLoading, setUser} = UseAuth();
   const [showPassword, setShowPassword] = useState(true);
 
   useEffect(() => {
@@ -39,11 +39,14 @@ const Register = () => {
     }
 
     createUser(email, password)
-      .then(() => {
+      .then((user) => {
+        
         updateUserProfile(name, imgUrl)
         .then((result) => {
+          console.log(user);
           console.log(result);
           setLoading(false);
+          setUser({ ...user, displayName: name, photoURL: imgUrl });
           navigate(form);
           toast.success("Register Successfully");
         });

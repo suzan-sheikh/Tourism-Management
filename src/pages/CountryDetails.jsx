@@ -29,7 +29,7 @@ const CountryDetails = () => {
   }, [id]);
 
   const {
-    name,
+    spot_name,
     country,
     location,
     description,
@@ -51,7 +51,7 @@ const CountryDetails = () => {
         </div>
 
           <h1 className="my-8 border-l-8 border-red-500 py-2 pl-2 text-3xl font-bold">
-            {name}
+            {spot_name}
             <span className="ml-2" style={{ color: "red", fontWeight: "bold" }}>
               {/* Style will be inherited from the parent element */}
               <Typewriter
@@ -99,7 +99,7 @@ const CountryDetails = () => {
 
           <div className="flex items-center justify-between">
             <div className="text-justify">
-              <p> Tourist Spot Name: <span className="text-red-500 font-black"> {name}</span>              
+              <p> Tourist Spot Name: <span className="text-red-500 font-black"> {spot_name}</span>              
               </p>
             </div>
           </div>
